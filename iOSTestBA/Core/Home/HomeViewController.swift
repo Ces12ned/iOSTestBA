@@ -33,9 +33,10 @@ class HomeViewController: UIViewController {
     
     //MARK: - Properties & Initializers
     
-     var cellCases : [CellType]
+    var cellCases : [CellType]
     
-    
+    internal var selectedCells: [Int: Int] = [:]
+
     init(cellCases: [CellType]) {
         self.cellCases = cellCases
         super.init(nibName: nil, bundle: nil)

@@ -34,7 +34,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
         
         switch cellSection{
         case .camera:
-            
             return tableView.createDequeueCell(with: identifier, at: indexPath) as! CameraCell
             
         case .photo:
@@ -60,4 +59,22 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
             return favoriteColorCell
         }
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if cellCases[indexPath.section].cellIdentifier == "sexCell"{
+            
+            let section = indexPath.section
+            let row = indexPath.row
+
+            if let previouslySelectedRow = selectedCells[section] {
+                let indexPathToDeselect = IndexPath(row: previouslySelectedRow, section: section)
+                tableView.deselectRow(at: indexPathToDeselect, animated: true)
+            }
+            
+            selectedCells[section] = row
+        }
+    }
+    
 }
