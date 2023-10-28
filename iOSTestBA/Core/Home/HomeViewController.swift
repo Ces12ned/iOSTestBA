@@ -31,25 +31,20 @@ class HomeViewController: UIViewController {
     }()
     
     
-    private let nextVCButton : UIButton = {
-        
-        let nextVCButton = UIButton()
-        nextVCButton.translatesAutoresizingMaskIntoConstraints = false
-        nextVCButton.titleLabel?.font = UIFont(name: "Futura", size: 18)
-        nextVCButton.setTitle("Ir a seleccionados", for: .normal)
-        nextVCButton.setTitleColor(.black, for: .normal)
-        nextVCButton.backgroundColor = .systemCyan
-        nextVCButton.layer.borderWidth = 2
-        nextVCButton.layer.borderColor =  UIColor.black.cgColor
-        nextVCButton.layer.cornerRadius = 18
-        return nextVCButton
-        
-    }()
-    
     //MARK: - Properties & Initializers
     
-    var cellCases = CellType.allCases
-
+     var cellCases : [CellType]
+    
+    
+    init(cellCases: [CellType]) {
+        self.cellCases = cellCases
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     //MARK: - Life Cycle
 
     override func viewDidLoad() {
@@ -58,7 +53,6 @@ class HomeViewController: UIViewController {
         view.backgroundColor = .systemGroupedBackground
         
         configureCellTableView()
-        configureNextVCButton()
     }
     
     
@@ -83,22 +77,5 @@ class HomeViewController: UIViewController {
         ])
     }
     
-    private func configureNextVCButton(){
-        
-        view.addSubview(nextVCButton)
-        setNextVCButtonConstraints()
-        nextVCButton.addTarget(self, action: #selector(goToNextVC), for: .touchUpInside)
-        
-    }
-    
-    private func setNextVCButtonConstraints() {
-        
-        NSLayoutConstraint.activate([
-            nextVCButton.topAnchor.constraint(equalTo: cellTableView.bottomAnchor, constant: 15),
-            nextVCButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
-            nextVCButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -36),
-            nextVCButton.heightAnchor.constraint(equalToConstant: 50)
-        ])
 
-    }
 }

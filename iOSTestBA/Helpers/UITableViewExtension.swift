@@ -15,9 +15,4 @@ extension UITableView{
         
         return cellType
     }
-    
-     
-        
-    
-    
 }

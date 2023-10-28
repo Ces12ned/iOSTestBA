@@ -9,14 +9,17 @@ import UIKit
 
 extension UIViewController{
     
-    @objc func goToNextVC(){
-                    
-        let selectedCellsViewController = SelectedViewController()
-                    
-        self.show(selectedCellsViewController, sender: self)
 
+    func updateAccessoryTypeForAllRows(in tableView: UITableView,with dataCount: Int) {
         
+        for i in 0..<dataCount {
+            let indexPath = IndexPath(row: i, section: 0)
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.accessoryType = .none
+            cell?.isSelected = false
+        }
     }
+    
 }
 
 

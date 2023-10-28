@@ -25,8 +25,6 @@ class FullNameCell: UITableViewCell {
     }()
 
     
-    
-    
     //MARK: - Properties
     
     
@@ -77,7 +75,15 @@ class FullNameCell: UITableViewCell {
 
 extension FullNameCell: UITextFieldDelegate{
     
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+                
+        
         
         return textField.setMaxCount(to: textField, in: range, for: string, count:35) && textField.setCharaterType(to: textField, in: range, for: string, with: CharacterSet.letters.union(CharacterSet.whitespaces)) ? true : false
     }

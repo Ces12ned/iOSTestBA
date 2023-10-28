@@ -60,14 +60,4 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
             return favoriteColorCell
         }
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
-    }
-    
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        
-    }
 }
