@@ -64,7 +64,9 @@ class CameraCell: UITableViewCell {
     
     @objc func imageAction(){
         
-        guard let safeURL = URL(string: "https://http2.mlstatic.com/vegeta-tamano-real-para-armar-en-papercraft-D_NQ_NP_892880-MLA26232224460_102017-F.jpg") else {return}
+        guard let safeHost: String = try? Configuration.value(for: "HOST") else {return}
+        guard let safeURL = URL(string: "https://" + safeHost) else {return}
+        print(safeURL)
         cameraImageView.load(url: safeURL)
 }
     

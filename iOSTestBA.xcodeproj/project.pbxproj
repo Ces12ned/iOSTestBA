@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A3011C72B1C1559009DF026 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0A3011C52B1C1559009DF026 /* Development.xcconfig */; };
+		0A3011C82B1C1559009DF026 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0A3011C62B1C1559009DF026 /* Production.xcconfig */; };
+		0A3011CA2B1C1563009DF026 /* Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3011C92B1C1563009DF026 /* Ext.swift */; };
 		0A5CF3112A9E7082004CEF3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5CF3102A9E7082004CEF3D /* AppDelegate.swift */; };
 		0A5CF3132A9E7082004CEF3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5CF3122A9E7082004CEF3D /* SceneDelegate.swift */; };
 		0A5CF3152A9E7082004CEF3D /* SelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5CF3142A9E7082004CEF3D /* SelectedViewController.swift */; };
@@ -33,6 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A3011C52B1C1559009DF026 /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		0A3011C62B1C1559009DF026 /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		0A3011C92B1C1563009DF026 /* Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext.swift; sourceTree = "<group>"; };
 		0A5CF30D2A9E7082004CEF3D /* iOSTestBA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTestBA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5CF3102A9E7082004CEF3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A5CF3122A9E7082004CEF3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,9 +77,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A3011C42B1C1559009DF026 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				0A3011C52B1C1559009DF026 /* Development.xcconfig */,
+				0A3011C62B1C1559009DF026 /* Production.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		0A5CF3042A9E7082004CEF3D = {
 			isa = PBXGroup;
 			children = (
+				0A3011C42B1C1559009DF026 /* Configuration */,
 				0A5CF30F2A9E7082004CEF3D /* iOSTestBA */,
 				0A5CF30E2A9E7082004CEF3D /* Products */,
 			);
@@ -92,6 +108,7 @@
 			children = (
 				0A5CF3102A9E7082004CEF3D /* AppDelegate.swift */,
 				0A5CF3122A9E7082004CEF3D /* SceneDelegate.swift */,
+				0A3011C92B1C1563009DF026 /* Ext.swift */,
 				0A5CF3292A9E70F3004CEF3D /* Core */,
 				0A5CF3322A9E8DD2004CEF3D /* Models */,
 				0A5CF32B2A9E7F2B004CEF3D /* Helpers */,
@@ -224,6 +241,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A3011C72B1C1559009DF026 /* Development.xcconfig in Resources */,
+				0A3011C82B1C1559009DF026 /* Production.xcconfig in Resources */,
 				0A5CF3202A9E7083004CEF3D /* LaunchScreen.storyboard in Resources */,
 				0A5CF31D2A9E7083004CEF3D /* Assets.xcassets in Resources */,
 			);
@@ -253,6 +272,7 @@
 				0A7584AB2A9EC3A300BDFC7B /* UITextFieldExtension.swift in Sources */,
 				0A7584B52A9EEBA800BDFC7B /* UImageViewExtension.swift in Sources */,
 				0A5CF33B2A9E9682004CEF3D /* PhoneNumberCell.swift in Sources */,
+				0A3011CA2B1C1563009DF026 /* Ext.swift in Sources */,
 				0A7584B12A9EDB9100BDFC7B /* UIDatePickerViewExtension.swift in Sources */,
 				0A5CF3112A9E7082004CEF3D /* AppDelegate.swift in Sources */,
 				0A5CF3132A9E7082004CEF3D /* SceneDelegate.swift in Sources */,
@@ -276,6 +296,7 @@
 /* Begin XCBuildConfiguration section */
 		0A5CF3222A9E7083004CEF3D /* Production */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A3011C62B1C1559009DF026 /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -337,6 +358,7 @@
 		};
 		0A5CF3232A9E7083004CEF3D /* Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A3011C52B1C1559009DF026 /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -394,8 +416,10 @@
 		};
 		0A5CF3252A9E7083004CEF3D /* Production */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A3011C62B1C1559009DF026 /* Production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "${ACCENT_COLOR}";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 356985BM4W;
@@ -420,8 +444,10 @@
 		};
 		0A5CF3262A9E7083004CEF3D /* Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A3011C52B1C1559009DF026 /* Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "${ACCENT_COLOR}";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 356985BM4W;

@@ -1,0 +1,13 @@
+//
+//  Development.xcconfig
+//  iOSTestBA
+//
+//  Created by Edgar Cisneros on 02/12/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+HOST = dragonball.guru/wp-content/uploads/2021/03/goku-profile-e1616173641804-400x400.png
+
+ACCENT_COLOR = DevAccentColor
